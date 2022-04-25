@@ -1,0 +1,58 @@
+﻿@page "/customer/list"
+ 
+@using Mc2.CrudTest.Shared.Models
+
+@inherits CustomersListVM
+
+<h1>List Of Customers</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href='/customer/add' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add Customer
+        </a>
+    </div>
+    
+</div>
+<br />
+
+ 
+@if (_customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>First Name</th>
+                <th>Family</th>
+                <th>PhoneNumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Customer customer in _customers)
+            {
+                <tr>
+                    <td>@customer.Name</td>
+                    <td>@customer.Firstname.ToString()</td>
+                    <td>@customer.Lastname.ToString()</td>
+                    <td>@customer.PhoneNumber</td>
+                    <td>
+                        <a href='/customer/edit/@customer.Id' class="btn btn-outline-dark" role="button">
+                            Edit
+                        </a>
+                        <a href='/customer
+/delete/@customer.Id' class="btn btn-outline-danger" role="button">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+ 
