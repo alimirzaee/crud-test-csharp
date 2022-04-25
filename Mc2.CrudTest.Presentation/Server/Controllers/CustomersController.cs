@@ -49,7 +49,7 @@ namespace Mc2.CrudTest.Presentation.Server.Controllers
                 return BadRequest();
             }
 
-            string phoneNoCheckResult = PhoneNumberValidatorClass.IsValid(Customer.PhoneNumber);
+            string phoneNoCheckResult = PhoneNumberValidatorClass.IsValid(Customer.PhoneNumber.ToString());
             if (phoneNoCheckResult != null)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,

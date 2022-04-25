@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "imask@6.4.2",
+      "destination": "wwwroot/lib/imask/"
+    }
+  ]
+}

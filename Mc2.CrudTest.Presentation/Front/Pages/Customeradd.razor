@@ -3,12 +3,10 @@
 
 @inherits Customeraddvm
 @using Mc2.CrudTest.Shared.Models
-
+ 
 
 <h3>Add Customer</h3>
  
-
-
 
  
 <h1>@Title Customer</h1>
@@ -43,7 +41,7 @@
     <div class="mb-3">
         <label for="Name" class="form-label">Phone Number</label>
         <div class="col-md-4">
-            <InputText class="form-control" @bind-Value="customer.PhoneNumber" />
+            <InputText class="form-control" @bind-Value="customer.InputPhoneNumber"  />
         </div>        
     </div>
 

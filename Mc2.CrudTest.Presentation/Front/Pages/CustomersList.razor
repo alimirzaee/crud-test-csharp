@@ -40,7 +40,7 @@ else
                     <td>@customer.Name</td>
                     <td>@customer.Firstname.ToString()</td>
                     <td>@customer.Lastname.ToString()</td>
-                    <td>@customer.PhoneNumber</td>
+                    <td>@customer.PhoneNumber.ToString("(+##)-###-###-####")</td>
                     <td>
                         <a href='/customer/edit/@customer.Id' class="btn btn-outline-dark" role="button">
                             Edit
